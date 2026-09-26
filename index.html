@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>karnewar-qcom</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --card: #f6f7f9;
+    --border: #e5e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --fg: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #7aa2f7;
+      --card: #171a21;
+      --border: #262a33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { width: 100%; max-width: 40rem; }
+  h1 { margin: 0 0 .25rem; font-size: 2rem; letter-spacing: -0.02em; }
+  .sub { margin: 0 0 2rem; color: var(--muted); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
+  .card h2 { margin: 0 0 .75rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: .4rem 1rem; margin: 0; }
+  dt { color: var(--muted); }
+  dd { margin: 0; font-variant-numeric: tabular-nums; }
+  code { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: .1rem .35rem; font-size: .9em; }
+  .ok { color: var(--accent); font-weight: 600; }
+  footer { margin-top: 2rem; color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>karnewar-qcom.github.io</h1>
+  <p class="sub">Placeholder landing page — verifying GitHub Pages deployment.</p>
+
+  <div class="card">
+    <h2>Deployment check</h2>
+    <dl>
+      <dt>Status</dt><dd class="ok">Page served successfully</dd>
+      <dt>URL</dt><dd id="url"><code>—</code></dd>
+      <dt>Protocol</dt><dd id="proto"><code>—</code></dd>
+      <dt>Loaded at</dt><dd id="time"><code>—</code></dd>
+    </dl>
+  </div>
+
+  <footer>
+    Replace <code>index.html</code> with the real site content when ready.
+  </footer>
+</main>
+<script>
+  document.getElementById('url').innerHTML = '<code>' + location.host + location.pathname + '</code>';
+  document.getElementById('proto').innerHTML = '<code>' + location.protocol.replace(':', '') + '</code>';
+  document.getElementById('time').innerHTML = '<code>' + new Date().toISOString() + '</code>';
+</script>
+</body>
+</html>
