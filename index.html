@@ -1,82 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>karnewar-qcom</title>
-<style>
-  :root {
-    color-scheme: light dark;
-    --bg: #ffffff;
-    --fg: #1a1a1a;
-    --muted: #6b7280;
-    --accent: #2563eb;
-    --card: #f6f7f9;
-    --border: #e5e7eb;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0f1115;
-      --fg: #e8eaed;
-      --muted: #9aa0a6;
-      --accent: #7aa2f7;
-      --card: #171a21;
-      --border: #262a33;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 2rem;
-    background: var(--bg);
-    color: var(--fg);
-    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  main { width: 100%; max-width: 40rem; }
-  h1 { margin: 0 0 .25rem; font-size: 2rem; letter-spacing: -0.02em; }
-  .sub { margin: 0 0 2rem; color: var(--muted); }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
-  }
-  .card h2 { margin: 0 0 .75rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-  dl { display: grid; grid-template-columns: auto 1fr; gap: .4rem 1rem; margin: 0; }
-  dt { color: var(--muted); }
-  dd { margin: 0; font-variant-numeric: tabular-nums; }
-  code { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: .1rem .35rem; font-size: .9em; }
-  .ok { color: var(--accent); font-weight: 600; }
-  footer { margin-top: 2rem; color: var(--muted); font-size: .85rem; }
-  a { color: var(--accent); }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Animesh Karnewar">
+  <meta name="description" content="Animesh Karnewar - Senior Research Scientist at Qualcomm AI Research. Efficient and controllable video and 3D generative AI.">
+  <title>Animesh Karnewar - Personal Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
 </head>
 <body>
-<main>
-  <h1>karnewar-qcom.github.io</h1>
-  <p class="sub">Placeholder landing page — verifying GitHub Pages deployment.</p>
 
-  <div class="card">
-    <h2>Deployment check</h2>
-    <dl>
-      <dt>Status</dt><dd class="ok">Page served successfully</dd>
-      <dt>URL</dt><dd id="url"><code>—</code></dd>
-      <dt>Protocol</dt><dd id="proto"><code>—</code></dd>
-      <dt>Loaded at</dt><dd id="time"><code>—</code></dd>
-    </dl>
+  <div class="page-container">
+
+    <!-- Left column: Sidebar Info & Quick Navigation -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="profile-avatar-container">
+          <img src="images/animesh_karnewar_profile_pic_2025.jpg" alt="Animesh Karnewar" class="profile-avatar">
+        </div>
+        <h1 class="profile-name">Animesh Karnewar</h1>
+        <div class="profile-title">Senior Research Scientist</div>
+        <div class="profile-affiliation">Qualcomm AI Research</div>
+
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=up0PbDUAAAAJ&hl=en" class="btn-link btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.46 12L12 15.56 18.54 12 12 8.44 5.46 12z"/>
+            </svg>
+            Google Scholar
+          </a>
+          <a href="https://github.com/akanimax" class="btn-link btn-secondary" target="_blank" rel="noopener noreferrer">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
+              <path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/animesh-karnewar-65b3ba115" class="btn-link btn-secondary" target="_blank" rel="noopener noreferrer">
+            <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="profile-extra-links">
+          <a href="https://twitter.com/AnimeshKarnewar" target="_blank" rel="noopener noreferrer">Twitter</a> &middot;
+          <a href="https://www.youtube.com/channel/UCJ5rz3gNJTb35dR1n5sd3UA" target="_blank" rel="noopener noreferrer">YouTube</a> &middot;
+          <a href="https://medium.com/@animeshsk3" target="_blank" rel="noopener noreferrer">Medium</a><br>
+          <a href="https://www.instagram.com/akanimax3" target="_blank" rel="noopener noreferrer">Instagram</a> &middot;
+          <a href="https://letterboxd.com/akanimax" target="_blank" rel="noopener noreferrer">Letterboxd</a>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#shipped" class="nav-link">Shipped Products and Demos</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#timeline" class="nav-link">Experience &amp; Education</a>
+        <a href="#awards" class="nav-link">Awards</a>
+        <a href="#services" class="nav-link">Professional Service</a>
+        <a href="#talks" class="nav-link">Teaching &amp; Talks</a>
+        <a href="#mentors" class="nav-link">Mentors</a>
+        <a href="#collaborators" class="nav-link">Collaborators</a>
+      </nav>
+    </aside>
+
+    <!-- Right column: Main content body -->
+    <main class="main-content">
+
+      <!-- Bio Intro -->
+      <section id="about" class="animate-on-scroll">
+        <div class="bio">
+          <p>
+            Hi, I'm Animesh. I am a <strong>Senior Research Scientist</strong> at
+            <strong>Qualcomm AI Research</strong> in Amsterdam. My research focus is on
+            <strong>efficient and controllable video generative AI</strong>.
+          </p>
+          <p>
+            I did my <strong>Ph.D.</strong> at
+            <a href="https://www.ucl.ac.uk/" target="_blank" rel="noopener noreferrer">UCL</a>, London.
+          </p>
+          <p>
+            Apart from this, I am passionate about cameras, and visual-storytelling.
+            My Instagram account:
+            <a class="ig-link" href="https://www.instagram.com/akanimax3" target="_blank" rel="noopener noreferrer" aria-label="@akanimax3 on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.9.419.417.679.816.896 1.378.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+              @akanimax3
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Shipped Products and Demos -->
+      <section id="shipped">
+        <h2>Shipped Products and Demos</h2>
+        <div class="features-grid">
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-image-box">
+              <img src="images/mobilewan_before.png" alt="MobileWan" loading="lazy">
+              <video src="images/mobilewan_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="feature-details">
+              <div class="feature-title">
+                <a href="https://qualcomm-ai-research.github.io/MobileWan/" target="_blank" rel="noopener noreferrer">MobileWan</a>
+              </div>
+              <div class="feature-subtitle">Closing the quality gap for mobile video diffusion</div>
+              <div class="feature-meta">Qualcomm 2026</div>
+            </div>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-image-box">
+              <img src="images/neodragon_before.png" alt="Neodragon" loading="lazy">
+              <video src="images/neodragon_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="feature-details">
+              <div class="feature-title">
+                <a href="https://qualcomm-ai-research.github.io/neodragon" target="_blank" rel="noopener noreferrer">Neodragon</a>
+              </div>
+              <div class="feature-subtitle">On-device text-to-video on the Hexagon NPU</div>
+              <div class="feature-meta">Qualcomm 2025</div>
+            </div>
+          </div>
+
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-image-box">
+              <img src="images/meta3dgen_before.png" alt="Meta 3D Gen" loading="lazy">
+              <video src="images/meta3dgen_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="feature-details">
+              <div class="feature-title">
+                <a href="https://ai.meta.com/research/publications/meta-3d-gen/" target="_blank" rel="noopener noreferrer">Meta 3D Gen</a>
+              </div>
+              <div class="feature-subtitle">Text-to-3D asset generation in under a minute</div>
+              <div class="feature-meta">Meta 2024</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <div class="pub-header-wrapper">
+          <h2>Publications</h2>
+          <div class="search-container">
+            <svg class="search-icon" style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <input type="text" id="pub-search" class="search-input" placeholder="Search publications...">
+          </div>
+        </div>
+
+        <div class="publications-list">
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/squad_before.png" alt="SQuad" loading="lazy">
+              <video src="images/squad_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://qualcomm-ai-research.github.io/squad/" target="_blank" rel="noopener noreferrer">SQuad: Sub-Quadratic Attention Distillation for Efficient Video Generation</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>, Denis Korzhenkov, Amirhossein Habibian, Mohsen Ghafoorian
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">arXiv 2026</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://qualcomm-ai-research.github.io/squad/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://arxiv.org/abs/2608.16585" target="_blank" rel="noopener noreferrer">arXiv</a>
+              </div>
+              <p class="pub-abstract">
+                We distill the quadratic attention of a pretrained video diffusion model into a sub-quadratic
+                alternative. Replacing all 30 blocks with SQuad-Attention recovers the original quality
+                (82.99 VBench Tot.), but only when supervised fine-tuning and DMD2 are composed &mdash;
+                either stage alone falls short.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/unicamo_before.png" alt="UniCaMo" loading="lazy">
+              <video src="images/unicamo_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://phongnhhn.info/Unicamo/" target="_blank" rel="noopener noreferrer">Track the Noise, Move the World: 3D-Grounded Motion-Consistent Noise for Controllable Video Generation</a>
+              </div>
+              <div class="pub-authors">
+                Long Vu, Tan Ngo, <strong>Animesh Karnewar</strong>, Amirhossein Habibian, Binh-Son Hua,
+                Hung Bui, Minh Hoai Nguyen,
+                <a href="https://www.phongnhhn.info/" target="_blank" rel="noopener noreferrer">Phong Nguyen-Ha</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">arXiv 2026</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://phongnhhn.info/Unicamo/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://arxiv.org/abs/2607.02798" target="_blank" rel="noopener noreferrer">arXiv</a>
+              </div>
+              <p class="pub-abstract">
+                We construct 3D-grounded, motion-consistent initial noise for video diffusion, giving unified
+                control over object motion, camera motion, and both jointly &mdash; including complex 3D
+                trajectories &mdash; without retraining the base model.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/pyramidalwan_before.png" alt="PyramidalWan" loading="lazy">
+              <video src="images/pyramidalwan_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://qualcomm-ai-research.github.io/PyramidalWan/" target="_blank" rel="noopener noreferrer">PyramidalWan: On Making Pretrained Video Model Pyramidal for Efficient Inference</a>
+              </div>
+              <div class="pub-authors">
+                Denis Korzhenkov, Adil Karjauv, <strong>Animesh Karnewar</strong>, Mohsen Ghafoorian,
+                Amirhossein Habibian
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">CVPR 2026</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://qualcomm-ai-research.github.io/PyramidalWan/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://arxiv.org/abs/2601.04792" target="_blank" rel="noopener noreferrer">arXiv</a>
+              </div>
+              <p class="pub-abstract">
+                We convert a pretrained video diffusion model into a pyramidal one, denoising at increasing
+                spatial resolutions across timesteps, so that most of the sampling trajectory runs at low
+                resolution and inference gets substantially cheaper.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/goembed_before.png" alt="GOEmbed" loading="lazy">
+              <video src="images/goembed_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://holodiffusion.github.io/goembed" target="_blank" rel="noopener noreferrer">GOEmbed: Gradient Origin Embeddings for Representation Agnostic 3D Feature Learning</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>,
+                <a href="https://shapovalov.ro/" target="_blank" rel="noopener noreferrer">Roman Shapovalov</a>,
+                <a href="https://www.tmonnier.com/" target="_blank" rel="noopener noreferrer">Tom Monnier</a>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi" target="_blank" rel="noopener noreferrer">Andrea Vedaldi</a>,
+                <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra" target="_blank" rel="noopener noreferrer">Niloy J. Mitra</a>,
+                <a href="https://d-novotny.github.io" target="_blank" rel="noopener noreferrer">David Novotny</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">ECCV 2024</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://holodiffusion.github.io/goembed" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://arxiv.org/abs/2312.08744" target="_blank" rel="noopener noreferrer">arXiv</a>
+              </div>
+              <p class="pub-abstract">
+                GOEmbed (Gradient Origin Embeddings) encodes source views into arbitrary 3D radiance-field
+                representations while maximizing the transfer of source information.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/holofusion_before.jpg" alt="HoloFusion" loading="lazy">
+              <video src="images/holofusion_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://holodiffusion.github.io/holofusion" target="_blank" rel="noopener noreferrer">HoloFusion: Towards Photo-realistic 3D Generative Modeling</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>,
+                <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra" target="_blank" rel="noopener noreferrer">Niloy J. Mitra</a>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi" target="_blank" rel="noopener noreferrer">Andrea Vedaldi</a>,
+                <a href="https://d-novotny.github.io" target="_blank" rel="noopener noreferrer">David Novotny</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">ICCV 2023</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://holodiffusion.github.io/holofusion" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://youtu.be/wJ7PfTgcVgM?si=J4ST5K-d5Ro3aery" target="_blank" rel="noopener noreferrer">Video</a>
+                <a href="https://arxiv.org/abs/2308.14244" target="_blank" rel="noopener noreferrer">arXiv</a>
+              </div>
+              <p class="pub-abstract">
+                HoloFusion generates photo-realistic 3D radiance fields by extending HoloDiffusion with a
+                jointly trained 2D super-resolution network.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/holodiffusion_before.png" alt="HoloDiffusion" loading="lazy">
+              <video src="images/holodiffusion_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://holodiffusion.github.io" target="_blank" rel="noopener noreferrer">HoloDiffusion: Training a 3D Diffusion Model using 2D Images</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi" target="_blank" rel="noopener noreferrer">Andrea Vedaldi</a>,
+                <a href="https://d-novotny.github.io" target="_blank" rel="noopener noreferrer">David Novotny</a>,
+                <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra" target="_blank" rel="noopener noreferrer">Niloy J. Mitra</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">CVPR 2023</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://holodiffusion.github.io" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://youtu.be/F65fEmvUKyc?si=ACa70stdfSX_HlAH" target="_blank" rel="noopener noreferrer">Video</a>
+                <a href="https://arxiv.org/abs/2303.16509" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a href="https://github.com/facebookresearch/holo_diffusion" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+              <p class="pub-abstract">
+                The first 3D-aware generative diffusion model that produces 3D-consistent images while being
+                trained with only posed image supervision.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/3inGAN_before.png" alt="3inGAN" loading="lazy">
+              <video src="images/3inGAN_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://geometry.cs.ucl.ac.uk/projects/2022/3inGAN" target="_blank" rel="noopener noreferrer">3inGAN: Learning a 3D Generative Model from Images of a Self-similar Scene</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>,
+                <a href="https://www.oliverwang.info" target="_blank" rel="noopener noreferrer">Oliver Wang</a>,
+                <a href="https://www.homepages.ucl.ac.uk/~ucactri/" target="_blank" rel="noopener noreferrer">Tobias Ritschel</a>,
+                <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra" target="_blank" rel="noopener noreferrer">Niloy J. Mitra</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">3DV 2022</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://geometry.cs.ucl.ac.uk/projects/2022/3inGAN/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://geometry.cs.ucl.ac.uk/projects/2022/3inGAN/static/videos/presentation/3dv22_presentation.mp4" target="_blank" rel="noopener noreferrer">Video</a>
+                <a href="https://arxiv.org/abs/2211.14902" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a href="https://github.com/akanimax/3inGAN" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+              <p class="pub-abstract">
+                An unconditional 3D generative model trained from 2D images of a single self-similar 3D scene.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/relufields_before.jpg" alt="ReLU Fields" loading="lazy">
+              <video src="images/relufields_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://geometry.cs.ucl.ac.uk/projects/2022/relu_fields" target="_blank" rel="noopener noreferrer">ReLU Fields: The Little Non-linearity That Could</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>,
+                <a href="https://www.homepages.ucl.ac.uk/~ucactri/" target="_blank" rel="noopener noreferrer">Tobias Ritschel</a>,
+                <a href="https://www.oliverwang.info" target="_blank" rel="noopener noreferrer">Oliver Wang</a>,
+                <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra" target="_blank" rel="noopener noreferrer">Niloy J. Mitra</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">SIGGRAPH 2022</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://geometry.cs.ucl.ac.uk/projects/2022/relu_fields/" target="_blank" rel="noopener noreferrer">Project Page</a>
+                <a href="https://youtu.be/GcRgqzWh4FA?si=pyTSL729gZeqNGjy" target="_blank" rel="noopener noreferrer">Video</a>
+                <a href="https://arxiv.org/abs/2205.10824" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a href="https://github.com/akanimax/thr3ed_atom" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+              <p class="pub-abstract">
+                A method to represent complex signals such as images or 3D scenes on regularly sampled grid
+                vertices, matching the expressiveness of coordinate-based MLPs while retaining the speed of
+                voxel grids &mdash; without neural networks or sparse data structures.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/rgbdnet_before.jpg" alt="RGBD-Net" loading="lazy">
+              <video src="images/rgbdnet_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://arxiv.org/abs/2011.14398" target="_blank" rel="noopener noreferrer">RGBD-Net: Predicting Color and Depth Images for Novel View Synthesis</a>
+              </div>
+              <div class="pub-authors">
+                <a href="https://www.phongnhhn.info/" target="_blank" rel="noopener noreferrer">Phong Nguyen</a>,
+                <strong>Animesh Karnewar</strong>,
+                <a href="https://lamhuynh.info/" target="_blank" rel="noopener noreferrer">Lam Huynh</a>,
+                <a href="https://esa.rahtu.fi/" target="_blank" rel="noopener noreferrer">Esa Rahtu</a>,
+                <a href="https://cmp.felk.cvut.cz/~matas/" target="_blank" rel="noopener noreferrer">Jiri Matas</a>,
+                <a href="https://www.oulu.fi/university/researcher/janne-heikkila" target="_blank" rel="noopener noreferrer">Janne Heikkila</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">3DV 2021</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://recorder-v3.slideslive.com/?share=56374&s=66606cbd-dc42-4e04-9114-a095a76efbd5" target="_blank" rel="noopener noreferrer">Video</a>
+                <a href="https://arxiv.org/abs/2011.14398" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a href="https://github.com/phongnhhn92/RGBDNet" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+              <p class="pub-abstract">
+                A cascaded architecture for novel view synthesis combining a hierarchical depth regression
+                network with a depth-aware generator, rendering spatially and temporally consistent target images.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-entry animate-on-scroll">
+            <div class="pub-image-box">
+              <img src="images/msggan_before.jpg" alt="MSG-GAN" loading="lazy">
+              <video src="images/msggan_after.mp4" muted loop playsinline preload="none"></video>
+            </div>
+            <div class="pub-details">
+              <div class="pub-title">
+                <a href="https://arxiv.org/abs/1903.06048" target="_blank" rel="noopener noreferrer">MSG-GAN: Multi-Scale Gradients for Generative Adversarial Networks</a>
+              </div>
+              <div class="pub-authors">
+                <strong>Animesh Karnewar</strong>,
+                <a href="https://www.oliverwang.info" target="_blank" rel="noopener noreferrer">Oliver Wang</a>
+              </div>
+              <div class="pub-venue-row">
+                <span class="pub-venue">CVPR 2020</span>
+              </div>
+              <div class="pub-links">
+                <a href="https://youtu.be/f0t7wLpnqzo?si=NPRZsTxALwX46m9v" target="_blank" rel="noopener noreferrer">Video</a>
+                <a href="https://arxiv.org/abs/1903.06048" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a href="https://github.com/akanimax/msg-stylegan-tf" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+              <p class="pub-abstract">
+                A simple but effective technique addressing GAN instability by allowing gradients to flow from
+                the discriminator to the generator at multiple scales &mdash; a stable alternative to progressive growing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="search-empty" class="search-empty" style="display: none;">
+          No publications match your search query.
+        </div>
+      </section>
+
+      <!-- Experience & Education -->
+      <section id="timeline">
+        <h2>Experience &amp; Education</h2>
+        <div class="timeline-columns">
+          <div>
+            <h3 class="timeline-group-title">Employment History</h3>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">Senior Research Scientist</span>
+                  <span class="timeline-date">2025-Now</span>
+                </div>
+                <div class="timeline-subtitle">Qualcomm AI Research &middot; <span class="timeline-details">Amsterdam, Netherlands</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">Visiting Researcher</span>
+                  <span class="timeline-date">2023-2024</span>
+                </div>
+                <div class="timeline-subtitle">Meta GenAI Research &middot; <span class="timeline-details">London, UK</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">Research Scientist Intern</span>
+                  <span class="timeline-date">2022-2023</span>
+                </div>
+                <div class="timeline-subtitle">Meta AI Research &middot; <span class="timeline-details">London, UK</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">R&amp;D Engineer</span>
+                  <span class="timeline-date">2019-2021</span>
+                </div>
+                <div class="timeline-subtitle">TomTom &middot; <span class="timeline-details">Amsterdam, Netherlands</span></div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">AI Engineer</span>
+                  <span class="timeline-date">2017-2019</span>
+                </div>
+                <div class="timeline-subtitle">Mobiliya</div>
+              </div>
+
+            </div>
+          </div>
+          <div>
+            <h3 class="timeline-group-title">Education</h3>
+            <div class="timeline">
+
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">PhD in Computer Science</span>
+                  <span class="timeline-date">2021-2024</span>
+                </div>
+                <div class="timeline-subtitle">University College London</div>
+                <div class="timeline-details">
+                  <a href="https://discovery.ucl.ac.uk/id/eprint/10195370/" target="_blank" rel="noopener noreferrer" style="color:inherit">
+                    "Towards Computationally Efficient, Photo-realistic, Large-scale, 3D Generative Modelling"
+                  </a>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-header">
+                  <span class="timeline-title">Bachelors in Computer Science</span>
+                  <span class="timeline-date">2013-2017</span>
+                </div>
+                <div class="timeline-subtitle">Pune Institute of Computer Technology</div>
+                <div class="timeline-details">University topper, 4.0/4.0 GPA</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section id="awards">
+        <h2>Awards and Acknowledgements</h2>
+        <div class="services-container">
+
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">Rabin Ezra Scholarship</span>
+            <span class="service-role">2023</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <a href="http://prime-itn.eu/" target="_blank" rel="noopener noreferrer" class="service-name">Marie Curie Fellowship</a>
+            <span class="service-role">2021</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span>
+              <a href="https://www.thehindu.com/sci-tech/technology/animesh-karnewar-on-using-ai-to-draw-faces/article24717381.ece" target="_blank" rel="noopener noreferrer" class="service-name">"The Hindu" feature on my research</a>
+              <a href="images/TheHinduArticle.jpg" target="_blank" rel="noopener noreferrer" class="pill-extra">local copy</a>
+            </span>
+            <span class="service-role">2018</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <a href="images/convocation_collage.jpeg" target="_blank" rel="noopener noreferrer" class="service-name">Department Topper, Computer Science</a>
+            <span class="service-role">2017</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <a href="images/university_rank.jpeg" target="_blank" rel="noopener noreferrer" class="service-name">University Topper award</a>
+            <span class="service-role">2015</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Professional Service -->
+      <section id="services">
+        <h2>Professional Service</h2>
+        <div class="services-container">
+
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">CVPR</span>
+            <span class="service-role">Reviewer</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">ICCV / ECCV</span>
+            <span class="service-role">Reviewer</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">ICLR</span>
+            <span class="service-role">Reviewer</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">NeurIPS</span>
+            <span class="service-role">Reviewer</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">SIGGRAPH</span>
+            <span class="service-role">Reviewer</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">Pacific Graphics</span>
+            <span class="service-role">Reviewer</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Teaching & Talks -->
+      <section id="talks">
+        <h2>Teaching and Research Talks</h2>
+        <div class="services-container">
+
+          <div class="service-pill animate-on-scroll">
+            <span class="service-name">MLVC course, UCL</span>
+            <span class="service-role">TA, 2021-2022</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <a href="https://www.linkedin.com/posts/animesh-karnewar-65b3ba115_it-was-a-privilege-to-deliver-an-hour-long-activity-6573537017760710656-tM0Z" target="_blank" rel="noopener noreferrer" class="service-name">TomTom AI Summer School, Amsterdam</a>
+            <span class="service-role">Talk, 2019</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <a href="https://www.facebook.com/mobiliyatech/posts/pfbid0tJ74Yev2JCj8meCqJ3JzxD4bihfKzX8d96YjNvkP7VZseT8dhMQWSKEJATRpTpX2l" target="_blank" rel="noopener noreferrer" class="service-name">MIT, Pune</a>
+            <span class="service-role">Talk, 2019</span>
+          </div>
+          <div class="service-pill animate-on-scroll">
+            <span>
+              <a href="https://youtu.be/-tG0Hh3I0tI?si=ARDlaZdUwLy7GkA_" target="_blank" rel="noopener noreferrer" class="service-name">Humans of Analytics Fireside Chat</a>
+              <a href="images/hoa_fireside_chat.png" target="_blank" rel="noopener noreferrer" class="pill-extra">poster</a>
+            </span>
+            <span class="service-role">Talk, 2018</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Mentors -->
+      <section id="mentors">
+        <h2>Mentors</h2>
+        <div class="mentors-grid">
+
+          <div class="mentor-card animate-on-scroll">
+            <div class="mentor-photo"><img src="images/mentors/oliver.jpg" alt="Oliver Wang" loading="lazy" width="400" height="400"></div>
+            <div class="mentor-name"><a href="http://www.oliverwang.info" target="_blank" rel="noopener noreferrer">Oliver Wang</a></div>
+            <div class="mentor-role">Google DeepMind, prev. Adobe Research</div>
+          </div>
+          <div class="mentor-card animate-on-scroll">
+            <div class="mentor-photo"><img src="images/mentors/niloy.jpg" alt="Niloy J. Mitra" loading="lazy" width="400" height="400"></div>
+            <div class="mentor-name"><a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/" target="_blank" rel="noopener noreferrer">Prof. Niloy J. Mitra</a></div>
+            <div class="mentor-role">PhD supervisor &middot; UCL</div>
+          </div>
+          <div class="mentor-card animate-on-scroll">
+            <div class="mentor-photo"><img src="images/mentors/david.jpg" alt="David Novotny" loading="lazy" width="219" height="219"></div>
+            <div class="mentor-name"><a href="https://d-novotny.github.io/" target="_blank" rel="noopener noreferrer">David Novotny</a></div>
+            <div class="mentor-role">SpAItial AI, prev. Meta GenAI London</div>
+          </div>
+          <div class="mentor-card animate-on-scroll">
+            <div class="mentor-photo"><img src="images/mentors/andrea.jpg" alt="Andrea Vedaldi" loading="lazy" width="400" height="400"></div>
+            <div class="mentor-name"><a href="https://www.robots.ox.ac.uk/~vedaldi/" target="_blank" rel="noopener noreferrer">Prof. Andrea Vedaldi</a></div>
+            <div class="mentor-role">University of Oxford &middot; Meta GenAI</div>
+          </div>
+          <div class="mentor-card animate-on-scroll">
+            <div class="mentor-photo"><img src="images/mentors/tobias.jpg" alt="Tobias Ritschel" loading="lazy" width="323" height="323"></div>
+            <div class="mentor-name"><a href="http://www.homepages.ucl.ac.uk/~ucactri/" target="_blank" rel="noopener noreferrer">Prof. Tobias Ritschel</a></div>
+            <div class="mentor-role">PhD supervisor &middot; UCL</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Collaborators -->
+      <section id="collaborators">
+        <h2>Collaborators</h2>
+        <!-- Ordered by the recency of the project we worked on together, newest first. -->
+        <div class="students-grid">
+
+          <!-- MobileWan, 2026 -->
+          <div class="student-name">Mohsen Ghafoorian</div>
+          <div class="student-name">Denis Korzhenkov</div>
+          <div class="student-name">Adil Karjauv</div>
+          <div class="student-name">Fatih Porikli</div>
+          <div class="student-name">Amirhossein Habibian</div>
+
+          <!-- UniCaMo, 2026 -->
+          <div class="student-name">Phong Nguyen-Ha</div>
+          <div class="student-name">Long Vu</div>
+          <div class="student-name">Tan Ngo</div>
+          <div class="student-name">Binh-Son Hua</div>
+          <div class="student-name">Hung Bui</div>
+          <div class="student-name">Minh Hoai Nguyen</div>
+
+          <!-- GOEmbed, 2024 -->
+          <div class="student-name">Roman Shapovalov</div>
+
+          <!-- RGBD-Net, 2021 -->
+          <div class="student-name">Lam Huynh</div>
+          <div class="student-name">Esa Rahtu</div>
+          <div class="student-name">Jiri Matas</div>
+          <div class="student-name">Janne Heikkila</div>
+
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          &copy; Animesh Karnewar &middot; Updated 2026<br>
+          Design gratefully adapted from <a href="https://www.oliverwang.info/" target="_blank" rel="noopener noreferrer">Oliver Wang's homepage</a>.
+        </p>
+      </footer>
+
+    </main>
+
   </div>
 
-  <footer>
-    Replace <code>index.html</code> with the real site content when ready.
-  </footer>
-</main>
-<script>
-  document.getElementById('url').innerHTML = '<code>' + location.host + location.pathname + '</code>';
-  document.getElementById('proto').innerHTML = '<code>' + location.protocol.replace(':', '') + '</code>';
-  document.getElementById('time').innerHTML = '<code>' + new Date().toISOString() + '</code>';
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('pub-search');
+      const pubEntries = document.querySelectorAll('.pub-entry');
+      const emptyState = document.getElementById('search-empty');
+      const pubList = document.querySelector('.publications-list');
+
+      // Publication search: filter by title, authors, or venue
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          const isSearching = query.length > 0;
+          let visibleCount = 0;
+
+          pubList.classList.toggle('searching', isSearching);
+
+          pubEntries.forEach(entry => {
+            const title = entry.querySelector('.pub-title').textContent.toLowerCase();
+            const authors = entry.querySelector('.pub-authors').textContent.toLowerCase();
+            const venueEl = entry.querySelector('.pub-venue');
+            const venue = venueEl ? venueEl.textContent.toLowerCase() : '';
+
+            if (title.includes(query) || authors.includes(query) || venue.includes(query)) {
+              if (isSearching) {
+                entry.classList.add('search-match', 'appear');
+              } else {
+                entry.classList.remove('search-match');
+              }
+              visibleCount++;
+            } else {
+              entry.classList.remove('search-match');
+            }
+          });
+
+          emptyState.style.display = (visibleCount === 0 && isSearching) ? 'block' : 'none';
+        });
+      }
+
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { root: null, rootMargin: '0px', threshold: 0.05 });
+
+      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+      // Profile avatar comes into focus as the page is scrolled
+      const profileAvatar = document.querySelector('.profile-avatar');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const updateAvatarBlur = () => {
+        if (!profileAvatar || prefersReducedMotion) return;
+        const maxScroll = 500;
+        const maxBlur = 12;
+        const blurVal = Math.max(0, maxBlur * (1 - window.scrollY / maxScroll));
+        profileAvatar.style.filter = `blur(${blurVal}px)`;
+      };
+      updateAvatarBlur();
+
+      // Teaser videos: preload="none", so only fetch and play on hover
+      document.querySelectorAll('.pub-entry, .feature-card').forEach(card => {
+        const video = card.querySelector('video');
+        if (!video) return;
+        card.addEventListener('mouseenter', () => { video.play().catch(() => {}); });
+        card.addEventListener('mouseleave', () => { video.pause(); });
+      });
+
+      // Active nav highlighting on scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+
+      window.addEventListener('scroll', () => {
+        updateAvatarBlur();
+        let currentSectionId = '';
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            currentSectionId = sec.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + currentSectionId);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
